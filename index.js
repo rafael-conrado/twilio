@@ -7,6 +7,10 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extends: true }));
+
+app.get('/',(req,res)=>{
+  res.send("<h1>Tudo ok!</h1>")
+})
 // Create a route to handle incoming SMS messages
 // This is where the magic happens!
 app.post('/sms', (request, response) => {
